@@ -1,90 +1,61 @@
 # dotsFluid
-Generative animation built with JavaScript + p5.js.
 
+Real-time generative animation built with **JavaScript** and **p5.js**.  
+The system visualizes an array of synchronized dots whose size oscillates based on distance, phase and frequency.  
+User input —and periodic autonomous mutations— drive the behavior of the grid, producing fluid, evolving patterns.
 
-# DotsFluid — Generative Animation for Projection  
-**Artist:** Alejandro Muñoz  
-**Year:** 2024–2025  
-**Technologies:** JavaScript, p5.js  
-**License:** CC BY-NC-SA 4.0
+**Live demo:** https://www.alejandromunoz.com.ar/dotsfluid/
 
 ---
 
-## Overview
+## Concept
 
-DotsFluid is a generative animation based on a synchronized field of digital particles that behave like a fluid in constant transformation. The work explores chromatic vibration, controlled randomness, and the tension between order and noise.
+*dotsFluid* explores the relationship between human input, algorithmic movement and synchronized oscillation.  
+By modifying a few simple parameters (density, color, base frequency), the system transforms its visual structure, producing complex emergent patterns in real time.
 
-The piece runs autonomously and is intended for continuous projection in exhibition spaces.
-
-Online reference:  
-https://www.alejandromunoz.com.ar/dotsfluid/
+The work maintains a calm, continuous flow while periodically shifting into new configurations through autonomous transitions.
 
 ---
 
-## Files Included
+## Controls
 
-- **build/**  
-  Exhibition-ready version of the animation.  
-  Launch by opening `index.html`.
+**Color**
+- `G` → randomize background  
+- `F` → randomize dot color  
+- `1` / `2` → predefined dot colors  
 
-- **LICENSE**  
-  Creative Commons BY-NC-SA 4.0 — protects authorship, allows reinterpretation.
+**Density**
+- `A` → increase density  
+- `S` → decrease density  
 
----
+**Frequency**
+- `←` → slow down  
+- `→` → speed up  
 
-## Technical Requirements
-
-**Hardware**
-- Computer (Mac/PC) with modern browser and integrated GPU.
-- Full HD projector (1920×1080) or higher.
-- HDMI or DisplayPort connection.
-- No audio system required.
-
-**Software**
-- Updated browser: Chrome, Firefox or Edge.
-- Disable screen sleep and energy-saving modes.
-- Fullscreen mode for projection.
+**Save**
+- `Space` → capture PNG  
+- `R` → export 30-frame PNG sequence  
 
 ---
 
-## Installation Instructions
+## Autonomous Mode
 
-1. Open the **build/** folder.  
-2. Run `index.html` in a browser.  
-3. Switch to fullscreen:  
-   - Windows: F11  
-   - macOS: Ctrl + Cmd + F  
-4. Set projector resolution to 1920×1080.  
-5. Let the piece run continuously; it requires no interaction.
+Every 5 minutes the system performs a soft transition where it:
+- randomizes background + dot colors  
+- adjusts grid density (20–160 cells)  
+- modulates frequency (0.2–1.4)  
 
----
-
-## Interaction Controls (dotsFluid.js)
-
-**Random Color**
-- Press **G** to randomize the background  
-- Press **F** to randomize dot colors
-
-**Adjust Density**
-- **A** increases dot density  
-- **S** decreases dot density
-
-**Control Frequency**
-- **←** slows down oscillation  
-- **→** increases frequency
-
-**Save Frame**
-- **Spacebar** exports a PNG to the Downloads folder
+Transitions are interpolated gradually over ~20 seconds for a smooth, organic evolution.
 
 ---
 
-## Conceptual Notes
+## Technical Requirements (exhibition)
 
-By manipulating a simple set of parameters, the user can directly influence the behavior of an array of synchronized dots, generating complex and fluid visual patterns in real time. The core system is responsive and intuitive, giving immediate feedback to every adjustment. The design emphasizes the relationship between user input and visual output, offering a hands-on, evolving digital environment.
-
----
-
-## Contact
-
-For technical assistance or exhibition support, contact:  
-**alejandromunoz@gmail.com**
+- **Computer:** any Mac/PC capable of running Chrome or Firefox  
+- **Browser:** Chrome recommended (fullscreen mode)  
+- **Internet:** not required  
+- **Resolution:** adapts automatically to window size  
+- **Optional:** HDMI to projector, or direct HDMI with fullscreen  
+- **Proyector recomendado:** mínimo 3000 lúmenes si la sala no es totalmente oscura  
+- **Audio:** no utiliza audio  
+- **Modo autónomo:** ideal para exhibición continua sin interacción del público
