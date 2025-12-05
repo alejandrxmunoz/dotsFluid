@@ -1,3 +1,5 @@
+![Header](assets/screenshots/frame1.jpg)
+
 # dotsFluid
 
 Real-time generative animation built with **JavaScript** and **p5.js**.  
